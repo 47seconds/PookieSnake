@@ -110,7 +110,7 @@ int main (int argc, char **argv) {
       }
     }
 
-    
+    // game logic
   }
 
   SDL_DestroyTexture(stageTexture);
