@@ -8,7 +8,7 @@
 #define COLOR_WHITE 0xffffffff
 #define COLOR_GRAY 0x0f0f0f0f
 #define CELL_SIZE 30
-#define SIMULATION_SPEED 100
+#define SIMULATION_SPEED 50
 
 int SCREEN_WIDTH = WIDTH;
 int SCREEN_HEIGHT = HEIGHT;
@@ -194,10 +194,10 @@ int main (int argc, char **argv) {
   setRendererDrawColor(renderer, COLOR_BLACK);
   SDL_RenderClear(renderer);
 
-  // SDL_SetWindowFullscreen(window, SDL_WINDOW_FULLSCREEN_DESKTOP);
-  //
-  // SDL_DisplayMode display;
-  // SDL_GetWindowSize(window, &SCREEN_WIDTH, &SCREEN_HEIGHT);
+  SDL_SetWindowFullscreen(window, SDL_WINDOW_FULLSCREEN_DESKTOP);
+
+  SDL_DisplayMode display;
+  SDL_GetWindowSize(window, &SCREEN_WIDTH, &SCREEN_HEIGHT);
   SDL_RenderPresent(renderer);
 
   X_OFFSET = (SCREEN_WIDTH - (SCREEN_WIDTH/CELL_SIZE) * CELL_SIZE) / 2;
